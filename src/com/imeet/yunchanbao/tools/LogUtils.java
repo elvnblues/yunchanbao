@@ -3,7 +3,7 @@ package com.imeet.yunchanbao.tools;
 import android.util.Log;
 
 /**
- * @author wangli Log工具类
+ * @author elvnblues Log工具类
  * 
  */
 public final class LogUtils {
