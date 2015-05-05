@@ -10,7 +10,7 @@ public final class LogUtils {
 
 	private static boolean sIsLogEnabled = true;// 是否打开LOG
 
-	private static String sApplicationTag = "MusicPlayerLog";// LOG默认TAG
+	private static String sApplicationTag = "yunchanbaoLog";// LOG默认TAG
 
 	private static final String TAG_CONTENT_PRINT = "%s:%s.%s:%d";
 
@@ -82,7 +82,7 @@ public final class LogUtils {
 	//下面的定义和上面方法相同，可以定义不同等级的Debugger
 	public static void i(String tag,String msg){
 		if (sIsLogEnabled) {
-			Log.i(sApplicationTag, getContent(getCurrentStackTraceElement())+">"+msg);
+			Log.i(tag, getContent(getCurrentStackTraceElement())+">"+msg);
 		}
 	}
 	public static void i(String msg){
@@ -92,7 +92,7 @@ public final class LogUtils {
 	}
 	public static void w(String tag,String msg){
 		if (sIsLogEnabled) {
-			Log.w(sApplicationTag, getContent(getCurrentStackTraceElement())+">"+msg);
+			Log.w(tag, getContent(getCurrentStackTraceElement())+">"+msg);
 		}
 	}
 	public static void w(String msg){
@@ -102,7 +102,7 @@ public final class LogUtils {
 	}
 	public static void e(String tag,String msg){
 		if (sIsLogEnabled) {
-			Log.e(sApplicationTag, getContent(getCurrentStackTraceElement())+">"+msg);
+			Log.e(tag, getContent(getCurrentStackTraceElement())+">"+msg);
 		}
 	}
 	public static void e(String msg){
