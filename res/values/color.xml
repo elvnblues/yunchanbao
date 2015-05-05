@@ -10,4 +10,6 @@
 	<color name="white">#FFFFFF</color>
 	<color name="tool_bgcolor">#1575C9</color>
 	<color name="list_divider_line">#cccccc</color>
+	<!-- 文字颜色 -->
+	<color name="text_color_gray">#808080</color>
 </resources>
