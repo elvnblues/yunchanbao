@@ -1,4 +1,4 @@
-package com.imeet.yunchanbao.imgscroll;
+package com.imeet.yunchanbao.myview;
 
 import java.util.List;
 import java.util.Timer;

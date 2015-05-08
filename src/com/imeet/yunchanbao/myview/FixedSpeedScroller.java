@@ -1,4 +1,4 @@
-package com.imeet.yunchanbao.imgscroll;
+package com.imeet.yunchanbao.myview;
 import java.lang.reflect.Field;
 
 import android.content.Context;

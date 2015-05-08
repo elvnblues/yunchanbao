@@ -12,21 +12,25 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.imeet.yunchanbao.adapter.NavigationAdapter;
 import com.imeet.yunchanbao.constrant.Const;
-import com.imeet.yunchanbao.imgscroll.MyImgScroll;
+import com.imeet.yunchanbao.myview.MyGridView;
+import com.imeet.yunchanbao.myview.MyImgScroll;
 
 public class MainActivity extends Activity {
 	// UI
 	private TextView title_top_text;
 	private ImageView title_top_right;
+	
+	private LinearLayout ll_body;
+	private ScrollView scroll_main;
 
 	// ADScroll
 	private MyImgScroll msADPager; // 图片容器
@@ -34,7 +38,7 @@ public class MainActivity extends Activity {
 	private List<View> listViews; // 图片组
 
 	//导航菜单
-	private GridView gv_navigation;
+	private MyGridView gv_navigation;
 
 	// DATA
 	
@@ -54,11 +58,15 @@ public class MainActivity extends Activity {
 	private void init() {
 		title_top_text = (TextView) findViewById(R.id.title_top_text);
 		title_top_text.setText(R.string.activity_home);
+		
+		ll_body = (LinearLayout)findViewById(R.id.ll_body);
+		scroll_main = (ScrollView)findViewById(R.id.scroll_main);
+		scroll_main.requestChildFocus(ll_body, null); 
 
 		msADPager = (MyImgScroll) findViewById(R.id.ms_ad_pager);
 		ovalLayout = (LinearLayout) findViewById(R.id.ll_vb);
 		
-		gv_navigation = (GridView)findViewById(R.id.gv_navigation);
+		gv_navigation = (MyGridView)findViewById(R.id.gv_navigation);
 		
 		InitViewPager();// 初始化图片
 		// 开始滚动
@@ -138,4 +146,5 @@ public class MainActivity extends Activity {
 	public void stop(View v) {
 		msADPager.stopTimer();
 	}
+	
 }
