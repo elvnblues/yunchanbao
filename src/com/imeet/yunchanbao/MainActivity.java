@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.imeet.yunchanbao.adapter.NavigationAdapter;
+import com.imeet.yunchanbao.constrant.Const;
 import com.imeet.yunchanbao.imgscroll.MyImgScroll;
 
 public class MainActivity extends Activity {
@@ -36,15 +37,7 @@ public class MainActivity extends Activity {
 	private GridView gv_navigation;
 
 	// DATA
-	// 存放各功能图片
-	private Integer[] nvPics = { R.drawable.ic_launcher,
-			R.drawable.ic_launcher, R.drawable.ic_launcher,
-			R.drawable.ic_launcher, R.drawable.ic_launcher,
-			R.drawable.ic_launcher };
-	// 存放各功能的名称
-	private Integer[] nvName = { R.string.nv_name1, R.string.nv_name2,
-			R.string.nv_name3, R.string.nv_name4, R.string.nv_name5,
-			R.string.nv_name6 };
+	
 
 	public static final String TAG = "MainActivity";
 
@@ -73,7 +66,7 @@ public class MainActivity extends Activity {
 				R.layout.ad_bottom_item, R.id.ad_item_v,
 				R.drawable.dot_focused, R.drawable.dot_normal);
 		//初始化gv_navigation
-		gv_navigation.setAdapter(new NavigationAdapter(MainActivity.this,nvPics,nvName));
+		gv_navigation.setAdapter(new NavigationAdapter(MainActivity.this,Const.nvPics,Const.nvName));
 	}
 
 	private void setListener() {
@@ -126,7 +119,7 @@ public class MainActivity extends Activity {
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			// TODO Auto-generated method stub
-			Toast.makeText(MainActivity.this, "选中的功能是："+MainActivity.this.getString( nvName[position]),Toast.LENGTH_SHORT).show();  
+			Toast.makeText(MainActivity.this, "选中的功能是："+MainActivity.this.getString( Const.nvName[position]),Toast.LENGTH_SHORT).show();  
 		}
 	};
 
