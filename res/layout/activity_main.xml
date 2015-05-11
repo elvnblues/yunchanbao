@@ -56,7 +56,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dip"
-                android:background="#F2F2F2" />
+                android:background="@color/main_line2" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -88,12 +88,12 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dip"
-                android:background="@color/list_divider_line" />
+                android:background="@color/main_line1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/list_divider_line"
+                android:background="@color/main_line1"
                 android:orientation="horizontal" >
 
                 <ImageView
@@ -130,7 +130,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dip"
-                android:background="@color/list_divider_line" />
+                android:background="@color/main_line1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -146,15 +146,15 @@
                     android:gravity="center_horizontal"
                     android:orientation="vertical" >
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="童鞋" />
-
                     <ImageView
                         android:layout_width="80dip"
                         android:layout_height="80dip"
                         android:background="#91c64a" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="童鞋" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -165,16 +165,16 @@
                     android:background="#e19637"
                     android:gravity="center_horizontal"
                     android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="80dip"
+                        android:layout_height="80dip"
+                        android:background="#91c64a" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="奶瓶" />
-
-                    <ImageView
-                        android:layout_width="80dip"
-                        android:layout_height="80dip"
-                        android:background="#91c64a" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -185,16 +185,16 @@
                     android:background="#e19637"
                     android:gravity="center_horizontal"
                     android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="80dip"
+                        android:layout_height="80dip"
+                        android:background="#91c64a" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="尿不湿" />
-
-                    <ImageView
-                        android:layout_width="80dip"
-                        android:layout_height="80dip"
-                        android:background="#91c64a" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -206,22 +206,22 @@
                     android:gravity="center_horizontal"
                     android:orientation="vertical" >
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="童装" />
-
                     <ImageView
                         android:layout_width="80dip"
                         android:layout_height="80dip"
                         android:background="#91c64a" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="童装" />
                 </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dip"
-                android:background="@color/list_divider_line" />
+                android:background="@color/main_line1" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -249,6 +249,13 @@
                     android:textColor="@color/text_color_gray"
                     android:textSize="14sp" />
             </RelativeLayout>
+
+            <com.imeet.yunchanbao.myview.MyListView
+                android:id="@+id/lv_main_sale"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/list_divider_line"
+                android:dividerHeight="0.5dip" />
         </LinearLayout>
     </ScrollView>
 

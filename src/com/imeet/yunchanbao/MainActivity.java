@@ -15,14 +15,19 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.imeet.yunchanbao.adapter.MainSaleAdapter;
 import com.imeet.yunchanbao.adapter.NavigationAdapter;
 import com.imeet.yunchanbao.constrant.Const;
+import com.imeet.yunchanbao.entity.SaleInfo;
 import com.imeet.yunchanbao.myview.MyGridView;
 import com.imeet.yunchanbao.myview.MyImgScroll;
+import com.imeet.yunchanbao.myview.MyListView;
+import com.imeet.yunchanbao.tools.LogUtils;
 
 public class MainActivity extends Activity {
 	// UI
@@ -31,6 +36,10 @@ public class MainActivity extends Activity {
 	
 	private LinearLayout ll_body;
 	private ScrollView scroll_main;
+	
+	private MyListView lv_main_sale;
+	
+	
 
 	// ADScroll
 	private MyImgScroll msADPager; // 图片容器
@@ -41,6 +50,7 @@ public class MainActivity extends Activity {
 	private MyGridView gv_navigation;
 
 	// DATA
+	private MainSaleAdapter mainSaleAdapter; 
 	
 
 	public static final String TAG = "MainActivity";
@@ -62,6 +72,8 @@ public class MainActivity extends Activity {
 		ll_body = (LinearLayout)findViewById(R.id.ll_body);
 		scroll_main = (ScrollView)findViewById(R.id.scroll_main);
 		scroll_main.requestChildFocus(ll_body, null); 
+		
+		lv_main_sale = (MyListView)findViewById(R.id.lv_main_sale);
 
 		msADPager = (MyImgScroll) findViewById(R.id.ms_ad_pager);
 		ovalLayout = (LinearLayout) findViewById(R.id.ll_vb);
@@ -79,6 +91,31 @@ public class MainActivity extends Activity {
 
 	private void setListener() {
 		gv_navigation.setOnItemClickListener(gv_onItemClickListener);
+	}
+	
+	private void setData(){
+		List<SaleInfo> saleInfoList = new ArrayList<SaleInfo>();
+		SaleInfo saleInfo1 = new SaleInfo();
+		saleInfo1.set_ID(1);
+		saleInfo1.setImgurl("http://i.mmcdn.cn/simba/img/TB1PCA5HpXXXXbTaXXXSutbFXXX.jpg");
+		saleInfo1.setTag("童车新品上线啦");
+		saleInfo1.setPrice("￥135");
+		saleInfoList.add(saleInfo1);
+		SaleInfo saleInfo2 = new SaleInfo();
+		saleInfo2.set_ID(2);
+		saleInfo2.setImgurl("http://gtms01.alicdn.com/tps/i1/TB14C7oHXXXXXbjaXXXJLmnFXXX-880-70.jpg");
+		saleInfo2.setTag("童车新品上线啦");
+		saleInfo2.setPrice("￥190");
+		saleInfoList.add(saleInfo2);
+		SaleInfo saleInfo3 = new SaleInfo();
+		saleInfo3.set_ID(3);
+		saleInfo3.setImgurl("http://gtms02.alicdn.com/tps/i2/TB1zXHVHFXXXXXQXFXXnLSnFXXX-880-70.png");
+		saleInfo3.setTag("童车新品上线啦");
+		saleInfo3.setPrice("￥213");
+		saleInfoList.add(saleInfo3);
+		mainSaleAdapter = new MainSaleAdapter(MainActivity.this, saleInfoList);
+		lv_main_sale.setAdapter(mainSaleAdapter);
+		
 	}
 
 	@Override
@@ -131,6 +168,12 @@ public class MainActivity extends Activity {
 		}
 	};
 
+	@Override
+	protected void onStart() {
+		super.onStart();
+		setData();
+	}
+	
 	@Override
 	protected void onRestart() {
 		msADPager.startTimer();
