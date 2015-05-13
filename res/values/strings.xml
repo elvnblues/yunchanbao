@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <string name="app_name">yunchanbao</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string name="activity_home">首页</string>
+	<!-- 导航菜单各项名称 -->
+	<string name="nv_name1">月嫂服务</string>
+	<string name="nv_name2">母婴商城</string>
+	<string name="nv_name3">育婴宝典</string>
+	<string name="nv_name4">产后服务</string>
+	<string name="nv_name5">健康档案</string>
+	<string name="nv_name6">专家服务</string>
+	
+	<string name="main_specialty_store">专卖店</string>
+	<string name="main_more">更多</string>
+	<string name="main_recommendthesale">推荐特卖</string>
 </resources>

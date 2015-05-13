@@ -4,10 +4,10 @@ import com.imeet.yunchanbao.R;
 
 public interface Const {
 	// 存放各导航菜单图片
-	static final Integer[] nvPics = { R.drawable.ic_launcher,
-			R.drawable.ic_launcher, R.drawable.ic_launcher,
-			R.drawable.ic_launcher, R.drawable.ic_launcher,
-			R.drawable.ic_launcher };
+	static final Integer[] nvPics = { R.drawable.img_main_nanny_service,
+			R.drawable.img_main_monandbaby_store, R.drawable.img_main_infanteducation_manual,
+			R.drawable.img_main_aftergivingbirth_service, R.drawable.img_main_health_his,
+			R.drawable.img_main_expert_qa };
 	// 存放各导航菜单的名称
 	static final Integer[] nvName = { R.string.nv_name1, R.string.nv_name2,
 			R.string.nv_name3, R.string.nv_name4, R.string.nv_name5,

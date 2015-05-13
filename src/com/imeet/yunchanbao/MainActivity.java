@@ -9,12 +9,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -23,11 +25,11 @@ import android.widget.Toast;
 import com.imeet.yunchanbao.adapter.MainSaleAdapter;
 import com.imeet.yunchanbao.adapter.NavigationAdapter;
 import com.imeet.yunchanbao.constrant.Const;
+import com.imeet.yunchanbao.constrant.ConstClass;
 import com.imeet.yunchanbao.entity.SaleInfo;
 import com.imeet.yunchanbao.myview.MyGridView;
 import com.imeet.yunchanbao.myview.MyImgScroll;
 import com.imeet.yunchanbao.myview.MyListView;
-import com.imeet.yunchanbao.tools.LogUtils;
 
 public class MainActivity extends Activity {
 	// UI
@@ -63,11 +65,15 @@ public class MainActivity extends Activity {
 
 		init();
 		setListener();
+		setData();
 	}
 
 	private void init() {
 		title_top_text = (TextView) findViewById(R.id.title_top_text);
 		title_top_text.setText(R.string.activity_home);
+		title_top_right = (ImageView)findViewById(R.id.title_top_right);
+		title_top_right.setVisibility(View.VISIBLE);
+		title_top_right.setBackgroundResource(R.drawable.img_title_userceter);
 		
 		ll_body = (LinearLayout)findViewById(R.id.ll_body);
 		scroll_main = (ScrollView)findViewById(R.id.scroll_main);
@@ -91,6 +97,7 @@ public class MainActivity extends Activity {
 
 	private void setListener() {
 		gv_navigation.setOnItemClickListener(gv_onItemClickListener);
+		title_top_right.setOnClickListener(my_OnClickLister);
 	}
 	
 	private void setData(){
@@ -167,11 +174,42 @@ public class MainActivity extends Activity {
 			Toast.makeText(MainActivity.this, "选中的功能是："+MainActivity.this.getString( Const.nvName[position]),Toast.LENGTH_SHORT).show();  
 		}
 	};
+	private OnClickListener my_OnClickLister = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			Toast.makeText(MainActivity.this, "进入个人中心", Toast.LENGTH_SHORT).show();
+		}
+	};
 
+	public void setListViewHeightBasedOnChildren(ListView listView) {
+
+	    //获取listview的适配器
+	    ListAdapter listAdapter = listView.getAdapter();
+	    //item的高度
+	    int itemHeight = 46;
+
+	    if (listAdapter == null) {
+	        return;
+	    }
+
+	    int totalHeight = 0;
+
+	    for (int i = 0; i < listAdapter.getCount(); i++) {
+	    totalHeight += ConstClass.Dp2Px(getApplicationContext(),itemHeight)+listView.getDividerHeight();
+	    }
+
+	    ViewGroup.LayoutParams params = listView.getLayoutParams();
+	    params.height = totalHeight;
+
+	    listView.setLayoutParams(params);
+	}
+	
 	@Override
 	protected void onStart() {
 		super.onStart();
-		setData();
+		
 	}
 	
 	@Override
@@ -189,5 +227,4 @@ public class MainActivity extends Activity {
 	public void stop(View v) {
 		msADPager.stopTimer();
 	}
-	
 }
