@@ -122,7 +122,6 @@ public class MainActivity extends Activity {
 		saleInfoList.add(saleInfo3);
 		mainSaleAdapter = new MainSaleAdapter(MainActivity.this, saleInfoList);
 		lv_main_sale.setAdapter(mainSaleAdapter);
-		
 	}
 
 	@Override
@@ -183,28 +182,6 @@ public class MainActivity extends Activity {
 		}
 	};
 
-	public void setListViewHeightBasedOnChildren(ListView listView) {
-
-	    //获取listview的适配器
-	    ListAdapter listAdapter = listView.getAdapter();
-	    //item的高度
-	    int itemHeight = 46;
-
-	    if (listAdapter == null) {
-	        return;
-	    }
-
-	    int totalHeight = 0;
-
-	    for (int i = 0; i < listAdapter.getCount(); i++) {
-	    totalHeight += ConstClass.Dp2Px(getApplicationContext(),itemHeight)+listView.getDividerHeight();
-	    }
-
-	    ViewGroup.LayoutParams params = listView.getLayoutParams();
-	    params.height = totalHeight;
-
-	    listView.setLayoutParams(params);
-	}
 	
 	@Override
 	protected void onStart() {
