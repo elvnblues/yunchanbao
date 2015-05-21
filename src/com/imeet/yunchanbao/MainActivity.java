@@ -30,6 +30,8 @@ import com.imeet.yunchanbao.entity.SaleInfo;
 import com.imeet.yunchanbao.myview.MyGridView;
 import com.imeet.yunchanbao.myview.MyImgScroll;
 import com.imeet.yunchanbao.myview.MyListView;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 
 public class MainActivity extends Activity {
 	// UI
@@ -98,6 +100,7 @@ public class MainActivity extends Activity {
 	private void setListener() {
 		gv_navigation.setOnItemClickListener(gv_onItemClickListener);
 		title_top_right.setOnClickListener(my_OnClickLister);
+		lv_main_sale.setOnScrollListener(new PauseOnScrollListener(ImageLoader.getInstance(), true, true));
 	}
 	
 	private void setData(){

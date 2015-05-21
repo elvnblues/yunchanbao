@@ -70,7 +70,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:background="@drawable/img_specialty_store"/>
+                    android:background="@drawable/img_specialty_store"
+                    android:scaleType="center"/>
 
                 <TextView
                     android:id="@+id/tv_specialty_store_more"
@@ -99,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/img_specialty_pro1" 
-                    android:scaleType="centerInside"/>
+                    android:scaleType="center"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -112,7 +113,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/img_specialty_pro2"
-                        android:scaleType="centerInside" />
+                        android:scaleType="center" />
 
                     <ImageView
                         android:id="@+id/iv_iv_specialty_pro_3"
@@ -120,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0.5dip"
                         android:background="@drawable/img_specialty_pro3" 
-                        android:scaleType="centerInside"/>
+                        android:scaleType="center"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -145,7 +146,8 @@
                         android:id="@+id/iv_iv_specialty_pro_4"
                         android:layout_width="80dip"
                         android:layout_height="80dip"
-                        android:background="@drawable/img_specialty_pro4" />
+                        android:background="@drawable/img_specialty_pro4" 
+                        android:scaleType="center"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -165,7 +167,8 @@
                         android:id="@+id/iv_iv_specialty_pro_5"
                         android:layout_width="80dip"
                         android:layout_height="80dip"
-                        android:background="@drawable/img_specialty_pro5" />
+                        android:background="@drawable/img_specialty_pro5"
+                        android:scaleType="center" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -185,7 +188,8 @@
                         android:id="@+id/iv_iv_specialty_pro_6"
                         android:layout_width="80dip"
                         android:layout_height="80dip"
-                        android:background="@drawable/img_specialty_pro6" />
+                        android:background="@drawable/img_specialty_pro6" 
+                        android:scaleType="center"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -205,7 +209,8 @@
                         android:id="@+id/iv_iv_specialty_pro_7"
                         android:layout_width="80dip"
                         android:layout_height="80dip"
-                        android:background="@drawable/img_specialty_pro7" />
+                        android:background="@drawable/img_specialty_pro7" 
+                        android:scaleType="center"/>
 
                     <TextView
                         android:layout_width="wrap_content"
