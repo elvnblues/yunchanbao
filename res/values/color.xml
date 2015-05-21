@@ -6,13 +6,15 @@
 	<color name="title_pink">#fe658f</color>
 	<color name="title_white">#ebfff9</color>
 	<color name="hu_blue">#1E90FF</color>
-	<color name="gray">#cccccc</color>
+	<color name="gray">#EBEBEB</color>
 	<color name="black">#000000</color>
 	<color name="white">#FFFFFF</color>
 	<color name="tool_bgcolor">#1575C9</color>
 	<color name="list_divider_line">#cccccc</color>
 	<!-- 文字颜色 -->
-	<color name="text_color_gray">#808080</color>
+	<color name="text_color_more">#aaaaaa</color>
+	<color name="text_color_gray">#6f6f6f</color>
+	<color name="text_color_sale_item">#6d6d6d</color>
 	<!-- 主页 -->
 	<color name="main_line1">#D3D3D3</color>
 	<color name="main_line2">#D4D2CE</color>

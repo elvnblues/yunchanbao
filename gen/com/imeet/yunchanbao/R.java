@@ -794,7 +794,7 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070010;
+        public static final int abc_search_url_text_holo=0x7f070012;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
@@ -805,11 +805,13 @@ containing a value of this type.
         public static final int lv_title_line=0x7f070003;
         /**  主页 
          */
-        public static final int main_line1=0x7f07000e;
-        public static final int main_line2=0x7f07000f;
+        public static final int main_line1=0x7f070010;
+        public static final int main_line2=0x7f070011;
+        public static final int text_color_gray=0x7f07000e;
         /**  文字颜色 
          */
-        public static final int text_color_gray=0x7f07000d;
+        public static final int text_color_more=0x7f07000d;
+        public static final int text_color_sale_item=0x7f07000f;
         public static final int title_blue=0x7f070004;
         public static final int title_pink=0x7f070005;
         public static final int title_white=0x7f070006;
@@ -1011,21 +1013,25 @@ containing a value of this type.
         public static final int image_fail=0x7f020061;
         public static final int image_indicator=0x7f020062;
         public static final int img_activity_info=0x7f020063;
-        public static final int img_main_aftergivingbirth_service=0x7f020064;
-        public static final int img_main_expert_qa=0x7f020065;
-        public static final int img_main_health_his=0x7f020066;
-        public static final int img_main_infanteducation_manual=0x7f020067;
-        public static final int img_main_monandbaby_store=0x7f020068;
-        public static final int img_main_nanny_service=0x7f020069;
-        public static final int img_specialty_pro1=0x7f02006a;
-        public static final int img_specialty_pro2=0x7f02006b;
-        public static final int img_specialty_pro3=0x7f02006c;
-        public static final int img_specialty_pro4=0x7f02006d;
-        public static final int img_specialty_pro5=0x7f02006e;
-        public static final int img_specialty_pro6=0x7f02006f;
-        public static final int img_specialty_pro7=0x7f020070;
-        public static final int img_specialty_store=0x7f020071;
-        public static final int img_title_userceter=0x7f020072;
+        public static final int img_infanteducation_manual_txt=0x7f020064;
+        public static final int img_list_right=0x7f020065;
+        public static final int img_main_aftergivingbirth_service=0x7f020066;
+        public static final int img_main_expert_qa=0x7f020067;
+        public static final int img_main_health_his=0x7f020068;
+        public static final int img_main_infanteducation_manual=0x7f020069;
+        public static final int img_main_monandbaby_store=0x7f02006a;
+        public static final int img_main_nanny_service=0x7f02006b;
+        public static final int img_rbc=0x7f02006c;
+        public static final int img_specialty_pro1=0x7f02006d;
+        public static final int img_specialty_pro2=0x7f02006e;
+        public static final int img_specialty_pro3=0x7f02006f;
+        public static final int img_specialty_pro4=0x7f020070;
+        public static final int img_specialty_pro5=0x7f020071;
+        public static final int img_specialty_pro6=0x7f020072;
+        public static final int img_specialty_pro7=0x7f020073;
+        public static final int img_specialty_store=0x7f020074;
+        public static final int img_title_userceter=0x7f020075;
+        public static final int lv_iducation_item_bg=0x7f020076;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1039,9 +1045,9 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050059;
+        public static final int action_settings=0x7f05005e;
         public static final int activity_chooser_view_content=0x7f050025;
-        public static final int ad_item_v=0x7f05004f;
+        public static final int ad_item_v=0x7f050052;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
         public static final int checkbox=0x7f05002d;
@@ -1054,29 +1060,32 @@ containing a value of this type.
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
-        public static final int function_name=0x7f050051;
-        public static final int function_view=0x7f050050;
-        public static final int gv_navigation=0x7f050042;
+        public static final int function_name=0x7f050054;
+        public static final int function_view=0x7f050053;
+        public static final int gv_navigation=0x7f050043;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
+        public static final int include_text_receivebroadcast=0x7f050042;
         public static final int include_top_title=0x7f05003c;
-        public static final int iv_iv_specialty_pro_2=0x7f050046;
-        public static final int iv_iv_specialty_pro_3=0x7f050047;
-        public static final int iv_iv_specialty_pro_4=0x7f050048;
-        public static final int iv_iv_specialty_pro_5=0x7f050049;
-        public static final int iv_iv_specialty_pro_6=0x7f05004a;
-        public static final int iv_iv_specialty_pro_7=0x7f05004b;
-        public static final int iv_sale_img=0x7f050052;
-        public static final int iv_specialty_pro_1=0x7f050045;
-        public static final int iv_specialty_store=0x7f050043;
+        public static final int iv_iv_specialty_pro_2=0x7f050047;
+        public static final int iv_iv_specialty_pro_3=0x7f050048;
+        public static final int iv_iv_specialty_pro_4=0x7f050049;
+        public static final int iv_iv_specialty_pro_5=0x7f05004a;
+        public static final int iv_iv_specialty_pro_6=0x7f05004b;
+        public static final int iv_iv_specialty_pro_7=0x7f05004c;
+        public static final int iv_sale_img=0x7f050056;
+        public static final int iv_specialty_pro_1=0x7f050046;
+        public static final int iv_specialty_store=0x7f050044;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int ll_ad_imgscroll=0x7f05003f;
         public static final int ll_body=0x7f05003e;
+        public static final int ll_rbc=0x7f050058;
         public static final int ll_vb=0x7f050041;
+        public static final int lv_main_iducation=0x7f050050;
         public static final int lv_main_sale=0x7f05004e;
         public static final int middle=0x7f050012;
         public static final int ms_ad_pager=0x7f050040;
@@ -1086,7 +1095,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int rl_top=0x7f050055;
+        public static final int rl_top=0x7f05005a;
         public static final int scroll_main=0x7f05003d;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
@@ -1106,15 +1115,17 @@ containing a value of this type.
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int title=0x7f05002b;
-        public static final int title_top_left=0x7f050056;
-        public static final int title_top_right=0x7f050058;
-        public static final int title_top_text=0x7f050057;
+        public static final int title_top_left=0x7f05005b;
+        public static final int title_top_right=0x7f05005d;
+        public static final int title_top_text=0x7f05005c;
         public static final int top_action_bar=0x7f050020;
-        public static final int tv_recommendthesale=0x7f05004c;
-        public static final int tv_recommendthesale_more=0x7f05004d;
-        public static final int tv_sale_price=0x7f050054;
-        public static final int tv_sale_tag=0x7f050053;
-        public static final int tv_specialty_store_more=0x7f050044;
+        public static final int tv_ReceiveBroadCast=0x7f050059;
+        public static final int tv_activity=0x7f05004d;
+        public static final int tv_iducation_title=0x7f050055;
+        public static final int tv_infanteducation_manual=0x7f05004f;
+        public static final int tv_main_top=0x7f050051;
+        public static final int tv_sale_tag=0x7f050057;
+        public static final int tv_specialty_store_more=0x7f050045;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
@@ -1171,9 +1182,11 @@ containing a value of this type.
         public static final int activity_main=0x7f030017;
         public static final int ad_bottom_item=0x7f030018;
         public static final int gv_navigation_item=0x7f030019;
-        public static final int lv_main_sale_item=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
-        public static final int title=0x7f03001c;
+        public static final int lv_main_iducation_item=0x7f03001a;
+        public static final int lv_main_sale_item=0x7f03001b;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int text_receivebroadcast=0x7f03001d;
+        public static final int title=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -1234,6 +1247,9 @@ containing a value of this type.
         public static final int nv_name4=0x7f0a0014;
         public static final int nv_name5=0x7f0a0015;
         public static final int nv_name6=0x7f0a0016;
+        /**  Other 
+         */
+        public static final int text_main_hint=0x7f0a001a;
     }
     public static final class style {
         /** 

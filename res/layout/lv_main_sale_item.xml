@@ -18,9 +18,9 @@
 	    android:layout_marginTop="3dip"
 	    android:layout_marginLeft="5dip"
 	    android:layout_marginBottom="15dip"
-	    android:textSize="12sp"
-	    android:textColor="@color/text_color_gray"/>
-	<TextView 
+	    android:textSize="14sp"
+	    android:textColor="@color/text_color_sale_item"/>
+	<!-- <TextView 
 	    android:id="@+id/tv_sale_price"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -29,5 +29,5 @@
 	    android:layout_marginTop="3dip"
 	    android:layout_marginRight="20dip"
 	    android:textSize="12sp"
-	    android:textColor="@color/text_color_gray"/>
+	    android:textColor="@color/text_color_gray"/> -->
 </RelativeLayout>

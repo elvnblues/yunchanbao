@@ -16,4 +16,7 @@
 	<string name="main_specialty_store">专卖店</string>
 	<string name="main_more">更多</string>
 	<string name="main_recommendthesale">推荐特卖</string>
+	
+	<!-- Other -->
+	<string name="text_main_hint">暂无更多数据...点击返回顶部</string>
 </resources>

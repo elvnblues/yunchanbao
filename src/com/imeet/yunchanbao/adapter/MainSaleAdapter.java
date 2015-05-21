@@ -18,6 +18,9 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class MainSaleAdapter extends BaseAdapter {
 
+	/*
+	 * 这里有一个以前遗留下来的price变量，如果之后不需要记得删除
+	 */
 	private Context context;
 	private List<SaleInfo> saleInfoList;
 
@@ -37,14 +40,14 @@ public class MainSaleAdapter extends BaseAdapter {
 					.findViewById(R.id.iv_sale_img);
 			holder.tv_sale_tag = (TextView) convertView
 					.findViewById(R.id.tv_sale_tag);
-			holder.tv_sale_price = (TextView) convertView
-					.findViewById(R.id.tv_sale_price);
+//			holder.tv_sale_price = (TextView) convertView
+//					.findViewById(R.id.tv_sale_price);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		holder.tv_sale_tag.setText(saleInfoList.get(position).getTag());
-		holder.tv_sale_price.setText(saleInfoList.get(position).getPrice());
+//		holder.tv_sale_price.setText(saleInfoList.get(position).getPrice());
 
 		// 显示图片的配置
 		DisplayImageOptions options = new DisplayImageOptions.Builder()
@@ -56,9 +59,6 @@ public class MainSaleAdapter extends BaseAdapter {
 		
 		ImageLoader.getInstance().displayImage(img_url, holder.iv_sale_img, options);  
 
-		// Bitmap bmp =
-		// ConstClass.getURLimage(saleInfoList.get(position).getImgurl());
-		// holder.iv_sale_img.setImageBitmap(bmp);
 		return convertView;
 	}
 

@@ -9,23 +9,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.imeet.yunchanbao.adapter.IducationAdapter;
 import com.imeet.yunchanbao.adapter.MainSaleAdapter;
 import com.imeet.yunchanbao.adapter.NavigationAdapter;
 import com.imeet.yunchanbao.constrant.Const;
-import com.imeet.yunchanbao.constrant.ConstClass;
+import com.imeet.yunchanbao.entity.IducationInfo;
 import com.imeet.yunchanbao.entity.SaleInfo;
 import com.imeet.yunchanbao.myview.MyGridView;
 import com.imeet.yunchanbao.myview.MyImgScroll;
@@ -39,23 +37,25 @@ public class MainActivity extends Activity {
 	private ImageView title_top_right;
 	
 	private LinearLayout ll_body;
-	private ScrollView scroll_main;
+	private ScrollView scroll_main;//主滚动框架
 	
-	private MyListView lv_main_sale;
+	private MyListView lv_main_sale;//活动专栏List
 	
+	private MyListView lv_main_iducation;//育婴知识List
 	
+	private TextView tv_main_top;//返回顶部
 
 	// ADScroll
 	private MyImgScroll msADPager; // 图片容器
 	private LinearLayout ovalLayout; // 圆点容器
-	private List<View> listViews; // 图片组
+	private List<View> adListViews; // 图片组
 
 	//导航菜单
 	private MyGridView gv_navigation;
 
 	// DATA
 	private MainSaleAdapter mainSaleAdapter; 
-	
+	private IducationAdapter iducationAdapter;
 
 	public static final String TAG = "MainActivity";
 
@@ -77,6 +77,8 @@ public class MainActivity extends Activity {
 		title_top_right.setVisibility(View.VISIBLE);
 		title_top_right.setBackgroundResource(R.drawable.img_title_userceter);
 		
+		tv_main_top = (TextView)findViewById(R.id.tv_main_top);
+		
 		ll_body = (LinearLayout)findViewById(R.id.ll_body);
 		scroll_main = (ScrollView)findViewById(R.id.scroll_main);
 		scroll_main.requestChildFocus(ll_body, null); 
@@ -88,9 +90,11 @@ public class MainActivity extends Activity {
 		
 		gv_navigation = (MyGridView)findViewById(R.id.gv_navigation);
 		
+		lv_main_iducation = (MyListView)findViewById(R.id.lv_main_iducation);
+		
 		InitViewPager();// 初始化图片
 		// 开始滚动
-		msADPager.start(this, listViews, 4000, ovalLayout,
+		msADPager.start(this, adListViews, 4000, ovalLayout,
 				R.layout.ad_bottom_item, R.id.ad_item_v,
 				R.drawable.dot_focused, R.drawable.dot_normal);
 		//初始化gv_navigation
@@ -100,6 +104,7 @@ public class MainActivity extends Activity {
 	private void setListener() {
 		gv_navigation.setOnItemClickListener(gv_onItemClickListener);
 		title_top_right.setOnClickListener(my_OnClickLister);
+		tv_main_top.setOnClickListener(my_OnClickLister);
 		lv_main_sale.setOnScrollListener(new PauseOnScrollListener(ImageLoader.getInstance(), true, true));
 	}
 	
@@ -125,6 +130,26 @@ public class MainActivity extends Activity {
 		saleInfoList.add(saleInfo3);
 		mainSaleAdapter = new MainSaleAdapter(MainActivity.this, saleInfoList);
 		lv_main_sale.setAdapter(mainSaleAdapter);
+		
+		List<IducationInfo> IducationList = new ArrayList<IducationInfo>();
+		IducationInfo info1 = new IducationInfo();
+		info1.set_ID(1);
+		info1.setTitle("孕期产检需要注意那些安全事项？？");
+		IducationList.add(info1);
+		IducationInfo info2 = new IducationInfo();
+		info2.set_ID(2);
+		info2.setTitle("两月后的宝宝突然很爱哭怎么办？？");
+		IducationList.add(info2);
+		IducationInfo info3= new IducationInfo();
+		info3.set_ID(3);
+		info3.setTitle("刚出生的小孩怎么洗澡？？");
+		IducationList.add(info3);
+		IducationInfo info4 = new IducationInfo();
+		info4.set_ID(4);
+		info4.setTitle("小宝宝不爱喝奶怎么办？？");
+		IducationList.add(info4);
+		iducationAdapter = new IducationAdapter(MainActivity.this,IducationList);
+		lv_main_iducation.setAdapter(iducationAdapter);
 	}
 
 	@Override
@@ -150,7 +175,7 @@ public class MainActivity extends Activity {
 	 * 初始化ADScroll图片
 	 */
 	private void InitViewPager() {
-		listViews = new ArrayList<View>();
+		adListViews = new ArrayList<View>();
 		int[] imageResId = new int[] { R.drawable.a, R.drawable.b,
 				R.drawable.c, R.drawable.d, R.drawable.e };
 		for (int i = 0; i < imageResId.length; i++) {
@@ -164,7 +189,7 @@ public class MainActivity extends Activity {
 			});
 			imageView.setImageResource(imageResId[i]);
 			imageView.setScaleType(ScaleType.CENTER_CROP);
-			listViews.add(imageView);
+			adListViews.add(imageView);
 		}
 	}
 	private OnItemClickListener gv_onItemClickListener = new OnItemClickListener() {
@@ -181,7 +206,15 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			Toast.makeText(MainActivity.this, "进入个人中心", Toast.LENGTH_SHORT).show();
+			switch(v.getId()){
+			case R.id.tv_main_top:
+				//返回顶部
+				scroll_main.scrollTo(0, 0);
+				break;
+			case R.id.title_top_right://个人中心
+				Toast.makeText(MainActivity.this, "进入个人中心", Toast.LENGTH_SHORT).show();
+				break;
+			}
 		}
 	};
 
