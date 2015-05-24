@@ -15,6 +15,7 @@ import com.imeet.yunchanbao.R;
 import com.imeet.yunchanbao.entity.SaleInfo;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme;
 
 public class MainSaleAdapter extends BaseAdapter {
 
@@ -57,7 +58,7 @@ public class MainSaleAdapter extends BaseAdapter {
 
 		String img_url = saleInfoList.get(position).getImgurl();
 		
-		ImageLoader.getInstance().displayImage(img_url, holder.iv_sale_img, options);  
+//		ImageLoader.getInstance().displayImage(img_url, holder.iv_sale_img, options);  
 
 		return convertView;
 	}

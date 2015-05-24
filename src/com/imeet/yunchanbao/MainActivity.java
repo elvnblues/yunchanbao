@@ -176,8 +176,7 @@ public class MainActivity extends Activity {
 	 */
 	private void InitViewPager() {
 		adListViews = new ArrayList<View>();
-		int[] imageResId = new int[] { R.drawable.a, R.drawable.b,
-				R.drawable.c, R.drawable.d, R.drawable.e };
+		int[] imageResId = new int[] { R.drawable.img_ad1, R.drawable.img_ad2};
 		for (int i = 0; i < imageResId.length; i++) {
 			ImageView imageView = new ImageView(this);
 			imageView.setOnClickListener(new OnClickListener() {

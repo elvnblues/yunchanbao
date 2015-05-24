@@ -8,7 +8,8 @@
         android:layout_height="130dip"
         android:layout_marginTop="10dip"
         android:layout_alignParentTop="true"
-        android:scaleType="center"/>
+        android:scaleType="center"
+        android:background="@drawable/img_sale1"/>
 	<TextView 
 	    android:id="@+id/tv_sale_tag"
 	    android:layout_width="wrap_content"

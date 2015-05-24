@@ -11,13 +11,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dip"
         android:background="@drawable/img_rbc"/>
-	<com.imeet.yunchanbao.myview.VerticalScrollTextView
+	<TextView
 	    android:id="@+id/tv_ReceiveBroadCast"
 	    android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dip"
         android:layout_marginRight="10dip"
-        android:text="亲，过年啦，大扫除头痛了有木有，钟点工放松  亲，过年啦，大扫除头痛了有木有，钟点工放松"
+        android:text="亲，过年啦，大扫除头痛了有木有，钟点工放松"
         android:textColor="#a0a0a0"
         android:textSize="14sp"/>
 </LinearLayout>
